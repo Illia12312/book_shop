@@ -1,0 +1,58 @@
+.header{
+    margin-bottom: 20px;
+}
+
+.headerHolder{
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.headerHolderImg{
+    width: 100px;
+    height: auto;
+}
+
+.headerHolderInput{
+    background-color: #EEE;
+    width: 370px;
+    height: 40px;
+    border-radius: 25px;
+    padding-left: 25px;
+    font-size: 14px;
+}
+
+.headerItemsImgHolder{
+    position: relative;
+}
+
+.headerHolderSearch{
+    position: absolute;
+    right: 20px;
+    top: 11px;
+}
+
+.headerItemsEnterHolder{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.headerHolderEnterButton{
+    height: 30px;
+    border: 2px solid #AAA !important;
+}
+
+.headerHolderSearch,
+.headerHolderCart{
+    cursor: pointer;
+    transition: 0.3 ease;
+    opacity: 1;
+}
+
+.headerHolderSearch:hover,
+.headerHolderCart:hover{
+    opacity: 0.65;
+}

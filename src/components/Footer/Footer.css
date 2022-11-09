@@ -1,0 +1,54 @@
+.footer{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 30px 20px;
+    border-top: 1px solid #CCC;
+}
+
+.footerHolder{
+    display: flex;
+    justify-content: start;
+    gap: 100px;
+}
+
+.footerLink{
+    text-decoration: none;
+    color: #555;
+    display: block;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+}
+
+.footerLink:hover{
+    color: rgb(215, 215, 215)
+}
+
+.footerItemTitle{
+    margin-bottom: 20px;
+}
+
+.footerItemIcons{
+    margin-right: 10px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}  
+
+.footerItemIcons:hover{
+    transform: scale(1.1);
+}
+
+.locationAndLinkHolder{
+    margin-top: 15px;
+    display: flex;
+    justify-content: start;
+    position: relative;
+}
+
+.footerItemLocationImg{
+    position: absolute;
+    top: -5px;
+}
+
+.footerLinkLocationFooter{
+    margin-left: 30px;
+}
