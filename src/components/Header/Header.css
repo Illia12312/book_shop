@@ -1,7 +1,3 @@
-.header{
-    margin-bottom: 20px;
-}
-
 .headerHolder{
     background-color: rgb(252, 252, 252);
     display: flex;
@@ -17,11 +13,11 @@
 
 .headerHolderInput{
     background-color: #EEE;
-    width: 370px;
-    height: 40px;
+    width: 570px;
+    height: 50px;
     border-radius: 25px;
     padding-left: 25px;
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .headerItemsImgHolder{
@@ -31,7 +27,7 @@
 .headerHolderSearch{
     position: absolute;
     right: 20px;
-    top: 11px;
+    top: 16px;
 }
 
 .headerItemsEnterHolder{
@@ -42,7 +38,7 @@
 
 .headerHolderEnterButton{
     height: 30px;
-    border: 2px solid #AAA !important;
+    border: 2px solid rgb(123, 175, 149) !important;
 }
 
 .headerHolderSearch,
@@ -55,4 +51,24 @@
 .headerHolderSearch:hover,
 .headerHolderCart:hover{
     opacity: 0.65;
+}
+
+.headerCategories{
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    font-size: 17px;
+    font-weight: 500;
+    background-color: #EEE;
+}
+
+.headerCategoriesItem{
+    color: black;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.headerCategoriesItem:hover{
+    color: rgb(123, 175, 149)
 }
