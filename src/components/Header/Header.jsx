@@ -1,4 +1,5 @@
 import "./Header.css";
+import {Link} from "react-router-dom";
 import logo from './../../img/logo.png';
 import cart from './../../img/icons/shopping-bag.png';
 import search from './../../img/icons/search.png';
@@ -10,7 +11,7 @@ const Header = () =>{
         <div className="header">
             <div className="headerHolder">
                 <div className="headerItems">
-                    <img src={logo} alt="book shop" className="headerHolderImg"/>
+                    <Link to="/"><img src={logo} alt="book shop" className="headerHolderImg"/></Link>
                 </div>
                 <div className="headerItems headerItemsImgHolder">
                     <input type="text" placeholder="Найдите книгу..." className="headerHolderInput"/>
@@ -18,7 +19,7 @@ const Header = () =>{
                 </div>
                 <div className="headerItems headerItemsEnterHolder">
                     <Button variant="contained headerHolderEnterButton">Войти</Button>
-                    <img src={cart} alt='cart' className="headerHolderCart"/>
+                    <Link to="/cart"><img src={cart} alt='cart' className="headerHolderCart"/></Link>
                 </div>
             </div>
             <div className="headerCategories">

@@ -1,18 +1,18 @@
 import './App.css';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import MySlider from './components/MySlider/MySlider';
-import Christmas from './components/Christmas/Christmas';
-import NewModels from './components/newModels/NewModels';
+import {Routes, Route} from 'react-router-dom'
+import Layout from './components/Layout/Layout';
+import HomePage from './pages/HomePage/HomePage';
+import Cart from './pages/Cart/Cart';
 
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Christmas/>
-      <NewModels/>
-      <MySlider/>
-      <Footer/>
+      <Routes>
+        <Route path='/' element={<Layout/>}>
+          <Route index element={<HomePage/>} />
+          <Route path='/cart' element={<Cart/>} />
+        </Route>
+      </Routes>
     </div>
   );
 }
