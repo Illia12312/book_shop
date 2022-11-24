@@ -1,4 +1,5 @@
 import "./Registration.css";
+import Checkbox from "../../components/Checkbox/Checkbox";
 
 const Registration = () =>{
     return(
@@ -21,7 +22,7 @@ const Registration = () =>{
                 </div>
                 <div className="registrCheck">
                 <label htmlFor="registrationCheck" className="registrationCheckHolder">
-                    <input type="checkbox" name="registration" id="registrationCheckbox" />
+                    <Checkbox/>
                     Я соглашаюсь с <a href="#" className="registrationCheckboxLink">условиями</a>
                 </label>
                 </div>

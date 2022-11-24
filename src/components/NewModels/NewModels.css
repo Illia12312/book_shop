@@ -1,0 +1,42 @@
+.newModels{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 100px;
+}
+
+.newModelsBookShop{
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.newModelsTitle{
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 21px;
+    margin-bottom: 25px;
+}
+
+.newModelsItems{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 100px;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.newModelsButton{
+    font-size: 14px;
+    padding: 5px 15px;
+    border: 1px solid rgb(47, 84, 123);
+    color: rgb(47, 84, 123);
+    background-color: #FFF;
+    transition: background-color 0.3s ease;
+}
+
+.newModelsButton:hover{
+    cursor: pointer;
+    background-color: rgb(217, 233, 249);
+}

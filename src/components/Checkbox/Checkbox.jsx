@@ -2,7 +2,10 @@ import "./Checkbox.css";
 
 const Checkbox = () =>{
     return(
-        <div className="checkbox"></div>
+        <label className="check option">
+            <input className="checkInput" type="checkbox"/>
+            <span className="checkbox"></span>
+        </label>
     )
 }
 

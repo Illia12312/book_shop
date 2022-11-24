@@ -1,0 +1,29 @@
+.checkInput{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.option{
+    display: block;
+    margin-bottom: 0.25em;
+}
+
+.checkbox{
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    background: url(unchecked.png);
+    margin-left: -135px;
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+.checkInput:checked + .checkbox{
+    background: url(checkbox.png);
+    width: 24px;
+    height: 24px;
+    margin-top: -3px;
+    margin-left: -135px;
+}
