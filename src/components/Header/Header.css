@@ -72,3 +72,7 @@
 .headerCategoriesItem:hover{
     color: rgb(123, 175, 149)
 }
+
+.transferLink{
+    text-decoration: none;
+}

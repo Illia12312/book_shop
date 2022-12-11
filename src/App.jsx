@@ -4,6 +4,7 @@ import Layout from './components/Layout/Layout';
 import HomePage from './pages/HomePage/HomePage';
 import Cart from './pages/Cart/Cart';
 import Registration from './pages/Registration/Registration';
+import Kid from './pages/Kid/Kid';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route index element={<HomePage/>} />
           <Route path='/cart' element={<Cart/>} />
           <Route path='/registration' element={<Registration/>} />
+          <Route path='/Kid' element={<Kid/>} />
         </Route>
       </Routes>
     </div>

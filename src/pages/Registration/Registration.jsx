@@ -1,7 +1,10 @@
 import "./Registration.css";
 import Checkbox from "../../components/Checkbox/Checkbox";
+import { useState } from "react";
 
 const Registration = () =>{
+    const [active, setActive] = useState(false);
+
     return(
         <div className="registration">
             <div className="registrationWrap">
@@ -22,11 +25,11 @@ const Registration = () =>{
                 </div>
                 <div className="registrCheck">
                 <label htmlFor="registrationCheck" className="registrationCheckHolder">
-                    <Checkbox/>
+                    <Checkbox active={active} setActive={setActive}/>
                     Я соглашаюсь с <a href="#" className="registrationCheckboxLink">условиями</a>
                 </label>
                 </div>
-                <button className="registrationButton">ЗАРЕГИСТРИРОВАТЬСЯ</button>
+                <button className={active ? "registrationButton" : "registrationButton disabled"}>ЗАРЕГИСТРИРОВАТЬСЯ</button>
             </div>
         </div>
     )

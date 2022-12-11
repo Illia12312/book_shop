@@ -2,9 +2,14 @@
     padding:15px;
 }
 
-.card:hover{
+.card.simple:hover{
     border: 1px solid rgb(215, 215, 215);
+    border-radius: 10px;
     padding: 14px;
+}
+
+.card.slider:hover{
+    padding: 15px;
 }
 
 .card:hover .cardAddToCart{
@@ -52,4 +57,5 @@
     border: 1px solid rgb(64, 140, 221);
     background-color: #FFF;
     color: rgb(64, 140, 221);
+    border-radius: 5px;
 }

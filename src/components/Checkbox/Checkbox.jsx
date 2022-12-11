@@ -1,9 +1,12 @@
 import "./Checkbox.css";
 
-const Checkbox = () =>{
+const Checkbox = ({active, setActive}) =>{
+    const activeFunc = () =>{
+        active ? setActive(false) : setActive(true);
+    }
     return(
         <label className="check option">
-            <input className="checkInput" type="checkbox"/>
+            <input className="checkInput" type="checkbox" onClick={activeFunc}/>
             <span className="checkbox"></span>
         </label>
     )

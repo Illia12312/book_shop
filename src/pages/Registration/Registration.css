@@ -48,6 +48,11 @@
     margin-bottom: 30px;
 }
 
+.registrationButton.disabled{
+    cursor: auto;
+    opacity: 0.5;
+}
+
 .registrCheck{
     position: relative;
     right:58px;

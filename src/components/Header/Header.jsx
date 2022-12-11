@@ -29,7 +29,7 @@ const Header = () =>{
             <div className="headerCategories">
                 <div className="headerCategoriesItem">КАТЕГОРИИ</div>
                 <div className="headerCategoriesItem">АУДОКНИГИ</div>
-                <div className="headerCategoriesItem">ДЛЯ ДЕТЕЙ</div>
+                <Link to="/kid" className="transferLink"><div className="headerCategoriesItem">ДЛЯ ДЕТЕЙ</div></Link>
                 <div className="headerCategoriesItem">СКИДКИ</div>
                 <div className="headerCategoriesItem">ПОПУЛЯРНЫЕ</div>
             </div>

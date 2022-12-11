@@ -1,9 +1,9 @@
 import "./Card.css";
 import img from "../../img/card-example.jpeg";
 
-const Card = () => {
+const Card = ({type}) => {
     return(
-        <div className="card">
+        <div className={`card ${type}`}>
             <div className="cardImgHolder">
                 <img src={img} alt="img" className="cardImg" />
             </div>
