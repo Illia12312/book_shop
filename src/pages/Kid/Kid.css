@@ -1,0 +1,16 @@
+.kid{
+    margin: 150px 100px 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    position: relative;
+}
+
+.manSelect{
+    position: absolute;
+    right: 40px;
+    top: -70px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
