@@ -27,11 +27,19 @@ const Header = () =>{
                 </div>
             </div>
             <div className="headerCategories">
-                <div className="headerCategoriesItem">КАТЕГОРИИ</div>
-                <div className="headerCategoriesItem">АУДОКНИГИ</div>
+                <nav className="headerListHolder">КАТЕГОРИИ
+                    <ul className="headerList">
+                        <li className="headerCategoriesListItem">Фантастика</li>
+                        <li className="headerCategoriesListItem">Романы</li>
+                        <li className="headerCategoriesListItem">Триллеры</li>
+                        <li className="headerCategoriesListItem">История</li>
+                        <li className="headerCategoriesListItem">Научные книги</li>
+                    </ul>
+                </nav>
+                <Link to="/audio" className="transferLink"><div className="headerCategoriesItem">АУДОКНИГИ</div></Link>
                 <Link to="/kid" className="transferLink"><div className="headerCategoriesItem">ДЛЯ ДЕТЕЙ</div></Link>
-                <div className="headerCategoriesItem">СКИДКИ</div>
-                <div className="headerCategoriesItem">ПОПУЛЯРНЫЕ</div>
+                <Link to="/discount" className="transferLink"><div className="headerCategoriesItem">СКИДКИ</div></Link>
+                <Link to="/popular" className="transferLink"><div className="headerCategoriesItem">ПОПУЛЯРНЫЕ</div></Link>
             </div>
             <LoginPopup active={active} setActive={setActive} />
         </div>

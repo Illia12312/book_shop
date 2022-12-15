@@ -76,3 +76,45 @@
 .transferLink{
     text-decoration: none;
 }
+
+.headerListHolder{
+    position: relative;
+    cursor: pointer;
+}
+
+.headerList{
+    position: absolute;
+    z-index: 200;
+    top: 10px;
+    left: -25px;
+    padding: 20px 0px 0px 0px;
+    display: none;
+}
+
+.headerList>li{
+    font-weight: 400;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+    background-color: rgb(246, 250, 255);
+    padding: 10px 20px 10px 10px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    transition: color 0.3s ease;
+    color: #444;
+    width: 160px;
+}
+
+.headerList>li:last-child{
+    border-radius: 0 0 5px 0;
+}
+
+.headerList>li:hover{
+    color:rgb(123, 175, 149);
+}
+
+.headerListHolder:hover .headerList{
+    display: block;
+}
+
+.headerList:hover{
+    display: block;
+} 

@@ -1,4 +1,4 @@
-import "./Kid.css";
+import "../Kid/Kid.css";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import Card from "../../components/Card/Card";
@@ -7,7 +7,7 @@ import _ from "lodash";
 import DiscountCard from "../../components/DiscountCard/DiscountCard";
 
 
-const Kid = () =>{
+const Audio = () =>{
     const [item, setItem] = useState([]);
 
     const books = useSelector((state) => state.books.books)
@@ -32,7 +32,7 @@ const Kid = () =>{
 
     return(
         <div className="kidHolder">
-          <h3 className="kidTitle">Для Детей</h3>
+          <h3 className="kidTitle">АУДОКНИГИ</h3>
           <div className="kid">
           <select
           name="select"
@@ -46,7 +46,7 @@ const Kid = () =>{
         </select>
         {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === true && 
+              item.type === "audio" &&  item.isDiscount === true && 
               <DiscountCard
               type = "simple"
               name={item.name}
@@ -58,7 +58,7 @@ const Kid = () =>{
           )}
           {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === false && 
+            item.type === "audio" &&  item.isDiscount === false && 
               <Card
               type = "simple"
                 name={item.name}
@@ -73,4 +73,4 @@ const Kid = () =>{
     )
 }
 
-export default Kid;
+export default Audio;

@@ -1,13 +1,12 @@
-import "./Kid.css";
+import "../Kid/Kid.css";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
-import Card from "../../components/Card/Card";
 import { useState } from "react";
 import _ from "lodash";
 import DiscountCard from "../../components/DiscountCard/DiscountCard";
 
 
-const Kid = () =>{
+const Discount = () =>{
     const [item, setItem] = useState([]);
 
     const books = useSelector((state) => state.books.books)
@@ -32,9 +31,9 @@ const Kid = () =>{
 
     return(
         <div className="kidHolder">
-          <h3 className="kidTitle">Для Детей</h3>
-          <div className="kid">
-          <select
+            <h3 className="kidTitle">Книги со скидками</h3>
+            <div className="kid">
+            <select
           name="select"
           id="manSelect"
           className="manSelect"
@@ -46,7 +45,7 @@ const Kid = () =>{
         </select>
         {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === true && 
+              item.isDiscount === true && 
               <DiscountCard
               type = "simple"
               name={item.name}
@@ -56,21 +55,9 @@ const Kid = () =>{
               img={item.img}
               />
           )}
-          {item.map(
-            (item) =>
-              item.type === "kid" &&  item.isDiscount === false && 
-              <Card
-              type = "simple"
-                name={item.name}
-                author={item.author}
-                key={item.id}
-                price={item.price}
-                img={item.img}
-              />
-          )}
-          </div>
+            </div>
         </div>
     )
 }
 
-export default Kid;
+export default Discount;
