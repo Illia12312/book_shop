@@ -22,7 +22,7 @@ const Header = () =>{
                     <img src={search} alt="search" className="headerHolderSearch"/>
                 </div>
                 <div className="headerItems headerItemsEnterHolder">
-                    <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button>
+                    {/* <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button> */}
                     <Link to="/cart"><img src={cart} alt='cart' className="headerHolderCart"/></Link>
                 </div>
             </div>
