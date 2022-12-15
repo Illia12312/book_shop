@@ -5,7 +5,8 @@ const DiscountCard = ({type, img, name, author, price}) =>{
     const fakePrice = Math.round(price / 5 + price);
 
     return(
-            <div className={`card ${type}`}>
+        <div className="discountCard">
+                        <div className={`card ${type}`}>
             <div className="cardImgHolder">
                 <img src={img} alt="img" className="cardImg" />
             </div>
@@ -15,6 +16,7 @@ const DiscountCard = ({type, img, name, author, price}) =>{
                 <div className="cardPrice">{price} грн. <strike className="cardFalsePrice">{fakePrice} грн.</strike></div>
             </div>
             <button className="cardAddToCart">добавить в корзину</button>
+        </div>
         </div>
     )
 }

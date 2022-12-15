@@ -91,7 +91,7 @@
     display: none;
 }
 
-.headerList>li{
+.headerList li{
     font-weight: 400;
     text-transform: capitalize;
     padding-bottom: 10px;
@@ -103,11 +103,11 @@
     width: 160px;
 }
 
-.headerList>li:last-child{
+.headerList li:last-child{
     border-radius: 0 0 5px 0;
 }
 
-.headerList>li:hover{
+.headerList li:hover{
     color:rgb(123, 175, 149);
 }
 

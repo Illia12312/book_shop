@@ -406,7 +406,7 @@ import {
        },
        {
         "name": "Ромео и Джульета",
-        "img": "C:\\project\\Books\\book_shop\\src\\img\\books\\novel_8.jpg",
+        "img": "https://live.staticflickr.com/65535/52563868315_b9d2335ed8_m.jpg",
         "price": 181,
         "author": "Уильям Шекспир",
         "type": "novel",
@@ -416,7 +416,7 @@ import {
        },
        {
         "name": "Миллион",
-        "img": "https://live.staticflickr.com/65535/52563868315_b9d2335ed8_m.jpg",
+        "img": "https://live.staticflickr.com/65535/52562951102_a250be853a_m.jpg",
         "price": 118,
         "author": "Моника Вуд",
         "type": "novel",

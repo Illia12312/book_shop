@@ -29,11 +29,11 @@ const Header = () =>{
             <div className="headerCategories">
                 <nav className="headerListHolder">КАТЕГОРИИ
                     <ul className="headerList">
-                        <li className="headerCategoriesListItem">Фантастика</li>
-                        <li className="headerCategoriesListItem">Романы</li>
-                        <li className="headerCategoriesListItem">Триллеры</li>
-                        <li className="headerCategoriesListItem">История</li>
-                        <li className="headerCategoriesListItem">Научные книги</li>
+                        <Link to="/fantasy" className="transferLink"><li className="headerCategoriesListItem">Фантастика</li></Link>
+                        <Link to="/novel" className="transferLink"><li className="headerCategoriesListItem">Романы</li></Link>
+                        <Link to="/thriller" className="transferLink"><li className="headerCategoriesListItem">Триллеры</li></Link>
+                        <Link to="/history" className="transferLink"><li className="headerCategoriesListItem">История</li></Link>
+                        <Link to="/science" className="transferLink"><li className="headerCategoriesListItem">Научные книги</li></Link>
                     </ul>
                 </nav>
                 <Link to="/audio" className="transferLink"><div className="headerCategoriesItem">АУДОКНИГИ</div></Link>
@@ -41,7 +41,7 @@ const Header = () =>{
                 <Link to="/discount" className="transferLink"><div className="headerCategoriesItem">СКИДКИ</div></Link>
                 <Link to="/popular" className="transferLink"><div className="headerCategoriesItem">ПОПУЛЯРНЫЕ</div></Link>
             </div>
-            <LoginPopup active={active} setActive={setActive} />
+            {/* <LoginPopup active={active} setActive={setActive} /> */}
         </div>
     )
 }

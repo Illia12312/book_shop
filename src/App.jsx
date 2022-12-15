@@ -8,6 +8,11 @@ import Kid from './pages/Kid/Kid';
 import Discount from './pages/Discount/Discount';
 import Popular from './pages/Popular/Popular';
 import Audio from './pages/Audio/Audio';
+import Fantasy from './pages/CategoriesOfHeader/Fantasy/Fantasy';
+import History from './pages/CategoriesOfHeader/History/History';
+import Novel from './pages/CategoriesOfHeader/Novel/Novel';
+import Thriller from './pages/CategoriesOfHeader/Thriller/Thriller';
+import Science from './pages/CategoriesOfHeader/Science/Science';
 
 function App() {
   return (
@@ -21,6 +26,11 @@ function App() {
           <Route path='/discount' element={<Discount/>} />
           <Route path='/popular' element={<Popular/>} />
           <Route path='/audio' element={<Audio/>} />
+          <Route path='/fantasy' element={<Fantasy/>} />
+          <Route path='/history' element={<History/>} />
+          <Route path='/novel' element={<Novel/>} />
+          // <Route path='/science' element={<Science/>} />
+          // <Route path='/thriller' element={<Thriller/>} />
         </Route>
       </Routes>
     </div>
