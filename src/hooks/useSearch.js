@@ -9,7 +9,9 @@ export function useLookinFor(value){
             if(counter===5){
                 break
             }
-            items[i].brand.includes(value) ? finalArr.push([items[i].brand, items[i].price]) && counter++ : counter+=0;
+            let name = items[i].name.toLowerCase();
+            let newValue = value.toLowerCase();
+            name.includes(newValue) ? finalArr.push([items[i].name, items[i].price, items[i].img, items[i].author]) && counter++ : counter+=0;
         }
     }
     let response = finalArr.splice(0,5);

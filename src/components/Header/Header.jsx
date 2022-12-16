@@ -6,10 +6,15 @@ import search from './../../img/icons/search.png';
 import Button from '@mui/material/Button';
 import { useState } from "react";
 import LoginPopup from "./LoginPopup/LoginPopup";
+import { useLookinFor } from "../../hooks/useSearch";
+import SearchItem from "../SearchItem/SearchItem";
 
 
 const Header = () =>{
     const [active, setActive] = useState(false);
+    const [value, setValue] = useState('');
+    const [blur, setBlur] = useState(true);
+    let {response} = useLookinFor(value);
 
     return(
         <div className="header">
@@ -17,10 +22,30 @@ const Header = () =>{
                 <div className="headerItems">
                     <Link to="/"><img src={logo} alt="book shop" className="headerHolderImg"/></Link>
                 </div>
-                <div className="headerItems headerItemsImgHolder">
-                    <input type="text" placeholder="Найдите книгу..." className="headerHolderInput"/>
+                <div className="headerItems headerItemsImgHolder" onBlur={() => setBlur(true)} onFocus={() => setBlur(false)}>
+                    <input type="text" placeholder="Найдите книгу..." 
+                    className="headerHolderInput"
+                    value={value}
+                    onChange={(e) => setValue(e.target.value)}
+                    />
+                    {value !== "" && response.length === 0 && blur === false &&
+                        <div className="emptySearch">
+                            НИЧЕГО НЕ НАЙДЕНО
+                        </div>
+                    }
+                    {
+                        response.length !== 0 && blur === false &&
+                        <div className="fullSearch">
+                            {response.map((i) => (
+                                <SearchItem name={i[0]} img={i[2]} key={i[0]+i[1]} price={i[1]} author={i[3]}/>
+                            ))}
+                        </div>
+                    }
                     <img src={search} alt="search" className="headerHolderSearch"/>
                 </div>
+
+
+
                 <div className="headerItems headerItemsEnterHolder">
                     {/* <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button> */}
                     <Link to="/cart"><img src={cart} alt='cart' className="headerHolderCart"/></Link>

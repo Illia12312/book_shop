@@ -13,7 +13,7 @@
 
 .headerHolderInput{
     background-color: #EEE;
-    width: 570px;
+    width: 650px;
     height: 50px;
     border-radius: 25px;
     padding-left: 25px;
@@ -118,3 +118,38 @@
 .headerList:hover{
     display: block;
 } 
+
+.headerItemsHolder{
+    position: relative;
+}
+
+.emptySearch{
+    position: absolute;
+    border-radius: 15px;
+    z-index: 200;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(255, 255, 255);
+    left: -10%;
+    top: 70px;
+    width: 120%;
+    height: 200px;
+    text-align: center;
+    padding-top: 80px;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fullSearch{
+    position: absolute;
+    border-radius: 15px;
+    z-index: 200;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: rgb(255, 255, 255);
+    left: -10%;
+    top: 70px;
+    width: 120%;
+}
+
+.fullSearchChild:last-child{
+    border-radius: 0 0 10px 10px;
+}

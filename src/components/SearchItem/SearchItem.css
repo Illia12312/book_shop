@@ -1,0 +1,40 @@
+.searchImgHolder{
+    width: 80px;
+    height: auto;
+    margin: 10px;
+    padding: 1px;
+}
+
+.searchItem{
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+    z-index: 10;
+    background-color: #FFF;
+    border-bottom: 1px solid rgb(176, 176, 176);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.searchItem:hover{
+    background-color:rgb(237, 242, 255);
+}
+
+.searchAuthor{
+   color: rgb(171, 171, 171); 
+   margin-bottom: 8px;
+   font-size: 14px;
+}
+
+.searchName{
+    margin-bottom: 4px;
+}
+
+.searchPrice{
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.infoHolderLL{
+    margin-top: 15px;
+}
