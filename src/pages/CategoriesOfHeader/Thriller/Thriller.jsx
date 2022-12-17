@@ -45,29 +45,29 @@ const Thriller = () =>{
           <option value="desc">Цена по убыванию</option>
         </select>
         {item.map(
-            (item) =>
-              item.type === "thriller" &&  item.isDiscount === true && 
-              <DiscountCard
-              type = "simple"
-              name={item.name}
-              author={item.author}
-              key={item.id}
-              price={item.price}
-              img={item.img}
-              />
-          )}
-          {item.map(
-            (item) =>
-            item.type === "thriller" &&  item.isDiscount === false && 
-              <Card
-              type = "simple"
+            (item) => {
+              if (item.type === "thriller" &&  item.isDiscount === true ) {
+                return <DiscountCard
+                type = "simple"
                 name={item.name}
                 author={item.author}
                 key={item.id}
                 price={item.price}
                 img={item.img}
-              />
-          )}
+                />;
+              }
+              else if (item.type === "thriller" &&  item.isDiscount === false) {
+                return <Card
+                   type = "simple"
+                   name={item.name}
+                   author={item.author}
+                   key={item.id}
+                   price={item.price}
+                   img={item.img}
+                   />
+              }
+            }
+           )}
           </div>
         </div>
     )

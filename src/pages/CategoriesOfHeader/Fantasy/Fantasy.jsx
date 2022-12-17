@@ -56,8 +56,8 @@ const Fantasy = () =>{
                 img={item.img}
                 />;
               }
-              else if (item.type === "fantasy" &&  item.isDiscount === true) {
-                return <DiscountCard
+              else if (item.type === "fantasy" &&  item.isDiscount === false) {
+                return <Card
                    type = "simple"
                    name={item.name}
                    author={item.author}
@@ -68,18 +68,6 @@ const Fantasy = () =>{
               }
             }
            )}
-          {item.map(
-            (item) =>
-            item.type === "fantasy" &&  item.isDiscount === false && 
-              <Card
-              type = "simple"
-                name={item.name}
-                author={item.author}
-                key={item.id}
-                price={item.price}
-                img={item.img}
-              />
-          )}
           </div>
         </div>
     )
