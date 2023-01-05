@@ -1,0 +1,40 @@
+.cardPopup{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+}
+
+.cardPopup.active{
+    pointer-events: all;
+    opacity: 1;
+    display: flex;
+}
+
+.cardPopupContent{
+    background-color: #FFF;
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+
+.cardPopupCloser{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cardPopupCloser:hover{
+    opacity: 0.6;
+}

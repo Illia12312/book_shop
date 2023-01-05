@@ -28,8 +28,6 @@ const Thriller = () =>{
     }
     }
 
-    console.log(books);
-
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">Триллеры</h3>

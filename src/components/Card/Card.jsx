@@ -1,8 +1,12 @@
+import { useState } from "react";
 import "./Card.css";
+import CardPopup from "../CardPopup/CardPopup";
 
 const Card = ({type, name, img, author, price}) => {
+    const [active, setActive] = useState(false);
+
     return(
-        <div className={`card ${type}`}>
+        <div className={`card ${type}`} onClick={() => setActive(true)}>
             <div className="cardImgHolder">
                 <img src={img} alt="img" className="cardImg" />
             </div>
@@ -12,6 +16,7 @@ const Card = ({type, name, img, author, price}) => {
                 <div className="cardPrice">{price} грн.</div>
             </div>
             <button className="cardAddToCart">добавить в корзину</button>
+            <CardPopup active={active} setActive={setActive}/>
         </div>
     )
 }

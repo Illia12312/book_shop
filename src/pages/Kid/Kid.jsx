@@ -28,8 +28,6 @@ const Kid = () =>{
     }
     }
 
-    console.log(books);
-
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">Для Детей</h3>

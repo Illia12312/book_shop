@@ -28,8 +28,6 @@ const Fantasy = () =>{
     }
     }
 
-    console.log(books);
-
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">Фантастика</h3>

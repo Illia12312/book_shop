@@ -28,8 +28,6 @@ const History = () =>{
     }
     }
 
-    console.log(books);
-
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">История</h3>

@@ -28,8 +28,6 @@ const Popular = () =>{
     }
     }
 
-    console.log(books);
-
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">Популярные книги</h3>

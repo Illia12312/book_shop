@@ -28,8 +28,6 @@ const Audio = () =>{
     }
     }
 
-    console.log(books);
-
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">АУДОКНИГИ</h3>

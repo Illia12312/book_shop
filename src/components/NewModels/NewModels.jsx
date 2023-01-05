@@ -7,11 +7,12 @@ import DiscountCard from "../DiscountCard/DiscountCard";
 
 const NewModels = () =>{
     const [item, setItem] = useState([]);
+    const [counter, setCounter] = useState(10);
     const books = useSelector((state) => state.books.books);
 
     useEffect(() => {
-        setItem(books.slice(0,10))
-    }, [])
+        setItem(books.slice(0,counter))
+    }, [counter])
 
     return(
         <div className="newModels">
@@ -41,7 +42,7 @@ const NewModels = () =>{
               )
           )}
             </div>
-            <button className="newModelsButton">ПОКАЗАТЬ ЕЩЁ</button>
+            <button className="newModelsButton" onClick={() => setCounter(prev => prev + 10)}>ПОКАЗАТЬ ЕЩЁ</button>
         </div>
     )
 }
