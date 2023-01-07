@@ -1,11 +1,21 @@
+import { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import './Cart.css';
-// import Product from './components/Product/Product';
+import Product from './components/Product';
+import { setCartCountACtion, setCartPriceACtion } from '../../redux-store/cart/actions';
 
 function Cart() {
-//   const dispatch = useDispatch();
-//   const cart = useSelector((state) => state.cart.cart);
-//   const email = useSelector((state) => state.entity.email);
+  const cart = useSelector((state) => state.cart.cart);
+  const dispatch = useDispatch();
+  
+
+  if(cart.length !== 0){
+    dispatch(setCartCountACtion());
+    dispatch(setCartPriceACtion());
+  }
+
+  const count = useSelector((state) => state.cart.cartCount)
+  const price = useSelector((state) => state.cart.cartPrice)
 
   return (
     <div className="cartWrapper">
@@ -22,13 +32,13 @@ function Cart() {
             <div className="cartHeaderCost">стоимость</div>
           </header>
           
-          {/* {cart.length === 0 ? <div className='emptyCart'>НИЧЕГО НЕТ</div> : cart.map((i) => (
-            <Product name={i.title} price={i.price} count={i.count} key={i.id} id={i.id} email={email}/>
-          ))} */}
+          {cart.length === 0 ? <div className='emptyCart'>НИЧЕГО НЕТ</div> : cart.map((i) => (
+            <Product name={i.name} price={i.price} count={i.count} key={i.img} img={i.img} author={i.author}/>
+          ))}
 
           <footer className="cartFooter">
-            <div className="cartFooterCount">1 шт.</div>
-            <div className="cartFooterPrice"> грн.</div>
+            <div className="cartFooterCount">{cart.length !== 0 ? count : 0} шт.</div>
+            <div className="cartFooterPrice">{cart.length !== 0 ? price : 0} грн.</div>
           </footer>
         </div>
       </div>

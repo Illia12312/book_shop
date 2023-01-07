@@ -11,6 +11,7 @@
     opacity: 0;
     pointer-events: none;
     transition: 0.4s;
+    z-index: 100000;
 }
 
 .cardPopup.active{
@@ -21,10 +22,74 @@
 
 .cardPopupContent{
     background-color: #FFF;
-    width: 400px;
-    height: 400px;
     position: relative;
+    border-radius: 12px;
+    display: flex;
+    padding: 40px 70px 40px 10px;
 }
+
+.cardPopupInfoHolder{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cardPopupImg{
+    height: 380px;
+    width: auto;
+}
+
+.cardPopupName{
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.cardPopupAuthor{
+    color: rgb(171, 171, 171);
+    margin-bottom: 25px;
+    font-size: 20px;
+}
+
+.cardPopupPrice{
+    color: rgb(47, 84, 123);
+    font-weight: 700;
+    margin-bottom: 85px;
+    font-size: 20px;
+}
+
+.cardPopupButtonHolder{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cardPopupCountButton{
+    font-size: 25px;
+    color: white;
+    background-color: rgb(231, 210, 225);
+    padding: 10px 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cardPopupCartButton{
+    font-size: 25px;
+    color: white;
+    background-color: rgb(69, 69, 175);
+    padding: 10px 70px;
+    border-radius: 15px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.cardPopupCartButton:hover,
+.cardPopupCountButton:hover{
+    opacity: 0.7;
+}
+
 
 .cardPopupCloser{
     position: absolute;
@@ -38,3 +103,28 @@
 .cardPopupCloser:hover{
     opacity: 0.6;
 }
+
+.cardPopupCountHolder{
+    border: 2px solid rgb(231, 210, 225);
+    border-radius: 10px;
+    position: relative;
+    bottom: 20px;
+    transform: scale(1, 0);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.cardPopupCountHolder.open{
+    transform: scale(1,1);
+}
+
+.cardPopupCount:last-child{
+    border-bottom: none;
+}
+
+.cardPopupCount{
+    width: 100%;
+    border-bottom: 2px solid rgb(231, 210, 225);
+    cursor: pointer;
+    padding: 10px 0;
+}   

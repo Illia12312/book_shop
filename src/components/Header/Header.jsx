@@ -13,7 +13,6 @@ import SearchItem from "../SearchItem/SearchItem";
 const Header = () =>{
     const [active, setActive] = useState(false);
     const [value, setValue] = useState('');
-    const [blur, setBlur] = useState(true);
     let {response} = useLookinFor(value);
 
     return(
@@ -22,19 +21,19 @@ const Header = () =>{
                 <div className="headerItems">
                     <Link to="/"><img src={logo} alt="book shop" className="headerHolderImg"/></Link>
                 </div>
-                <div className="headerItems headerItemsImgHolder" onBlur={() => setBlur(true)} onFocus={() => setBlur(false)}>
+                <div className="headerItems headerItemsImgHolder">
                     <input type="text" placeholder="Найдите книгу..." 
                     className="headerHolderInput"
                     value={value}
                     onChange={(e) => setValue(e.target.value)}
                     />
-                    {value !== "" && response.length === 0 && blur === false &&
+                    {value !== "" && response.length === 0 &&
                         <div className="emptySearch">
                             НИЧЕГО НЕ НАЙДЕНО
                         </div>
                     }
                     {
-                        response.length !== 0 && blur === false &&
+                        response.length !== 0 &&
                         <div className="fullSearch">
                             {response.map((i) => (
                                 <SearchItem name={i[0]} img={i[2]} key={i[0]+i[1]} price={i[1]} author={i[3]}/>
