@@ -13,6 +13,9 @@ import History from './pages/CategoriesOfHeader/History/History';
 import Novel from './pages/CategoriesOfHeader/Novel/Novel';
 import Thriller from './pages/CategoriesOfHeader/Thriller/Thriller';
 import Science from './pages/CategoriesOfHeader/Science/Science';
+import Payment from './pages/Payment/Payment';
+import Delivery from './pages/Delivery/Delivery';
+import Return from "./pages/Return/Return"
 
 function App() {
   return (
@@ -29,8 +32,11 @@ function App() {
           <Route path='/fantasy' element={<Fantasy/>} />
           <Route path='/history' element={<History/>} />
           <Route path='/novel' element={<Novel/>} />
-          // <Route path='/science' element={<Science/>} />
-          // <Route path='/thriller' element={<Thriller/>} />
+          <Route path='/return' element={<Return/>} />
+          <Route path='/payment' element={<Payment/>} />
+          <Route path='/delivery' element={<Delivery/>} />
+            <Route path='/science' element={<Science/>} />
+          <Route path='/thriller' element={<Thriller/>} />
         </Route>
       </Routes>
     </div>

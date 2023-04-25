@@ -1,0 +1,28 @@
+.delivery{
+    margin: 50px 180px 100px;
+}
+
+.deliveryUcraniaTitle{
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 19px;
+}
+
+.deliveryUcraniaTextTitle{
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.deliveryUcraniaTextText{
+    margin-bottom: 10px;
+}
+
+.deliveryUcraniaTextTextBigMargin{
+    margin-bottom: 30px;
+}
+
+.deliveryWorld{
+    margin-top: 60px;
+}
