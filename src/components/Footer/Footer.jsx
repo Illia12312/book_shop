@@ -29,7 +29,7 @@ const Footer = () =>{
                 <Link to='/payment' className="footerLink">Оплата</Link>
                 <Link to="/return" className="footerLink">Возврат</Link>
             </div>
-            <div className="footerItem">
+            <div className="footerItem footerItemTikTok">
                 <h3 className="footerItemTitle">НАШИ СОЦИАЛЬНЫЕ СЕТИ</h3>
                 <img src={instagram} alt="instagram" className="footerItemIcons"/>
                 <img src={telegram} alt="telegram" className="footerItemIcons"/>

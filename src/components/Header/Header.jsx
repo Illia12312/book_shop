@@ -8,12 +8,15 @@ import { useState } from "react";
 import LoginPopup from "./LoginPopup/LoginPopup";
 import { useLookinFor } from "../../hooks/useSearch";
 import SearchItem from "../SearchItem/SearchItem";
+import { useSelector } from "react-redux";
 
 
 const Header = () =>{
     const [active, setActive] = useState(false);
     const [value, setValue] = useState('');
     let {response} = useLookinFor(value);
+
+    const cartArray = useSelector((state) => state.cart.cart);
 
     return(
         <div className="header">
@@ -46,8 +49,15 @@ const Header = () =>{
 
 
                 <div className="headerItems headerItemsEnterHolder">
-                    {/* <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button> */}
-                    <Link to="/cart"><img src={cart} alt='cart' className="headerHolderCart"/></Link>
+                    <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button>
+                    <div className="headerHolderCartAndCartCounterHeader">
+                        {cartArray.length === 0 ? 
+                            <span className="cartCounterHeader">0</span>  :
+                            <span className="cartCounterHeader">{cartArray.length}</span>  
+                        }
+                        
+                        <Link to="/cart"><img src={cart} alt='cart' className="headerHolderCart"/></Link>
+                    </div>
                 </div>
             </div>
             <div className="headerCategories">
@@ -65,7 +75,7 @@ const Header = () =>{
                 <Link to="/discount" className="transferLink"><div className="headerCategoriesItem">СКИДКИ</div></Link>
                 <Link to="/popular" className="transferLink"><div className="headerCategoriesItem">ПОПУЛЯРНЫЕ</div></Link>
             </div>
-            {/* <LoginPopup active={active} setActive={setActive} /> */}
+            <LoginPopup active={active} setActive={setActive} />
         </div>
     )
 }

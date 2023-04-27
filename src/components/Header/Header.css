@@ -48,8 +48,7 @@
     opacity: 1;
 }
 
-.headerHolderSearch:hover,
-.headerHolderCart:hover{
+.headerHolderSearch:hover{
     opacity: 0.65;
 }
 
@@ -152,4 +151,87 @@
 
 .fullSearchChild:last-child{
     border-radius: 0 0 10px 10px;
+}
+
+.cartCounterHeader{
+    background-color: rgb(123, 175, 149);
+    font-size: 11px;
+    border-radius: 50px;
+    padding: 1px 4px;
+    position: absolute;
+    right: 65px;
+    top: 49px;
+    opacity:1;
+    z-index: 200;
+}
+
+.headerHolderCartAndCartCounterHeader{
+    opacity:1;
+    transition: 0.3 ease;
+}
+
+.headerHolderCartAndCartCounterHeader:hover{
+    opacity: 0.65;
+}
+
+@media (max-width: 993px){
+    .headerHolder{
+        flex-wrap: wrap;
+    }
+
+    .headerItems{
+        order: 1;
+        padding-bottom: 18px;
+    }
+
+    .headerItemsEnterHolder{
+        order: 1;
+    }
+
+    .headerItemsImgHolder{
+        order: 2;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:760px){
+    .headerHolderInput{
+        width: 480px;
+        height: 45px;
+    }
+    .headerHolderSearch{
+        top: 14px;
+    }
+}
+
+@media (max-width: 580px){
+    .headerHolderInput{
+        width: 400px;
+        height: 45px;
+    }
+    .headerHolderSearch{
+        top: 14px;
+    }
+
+    .headerHolderImg{
+        width: 75px;
+    }
+
+    .cartCounterHeader{
+        top: 40px;
+        right: 67px;
+    }
+}
+
+@media (max-width: 515px){
+    .headerHolder{
+        padding: 10 29px;
+    }
+}
+
+@media (max-width: 490px){
+    .headerHolderInput{
+        width: 300px;
+        height: 38px;
+    }
 }
