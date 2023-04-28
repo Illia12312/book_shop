@@ -40,3 +40,9 @@
     cursor: pointer;
     background-color: rgb(217, 233, 249);
 }
+
+@media (max-width: 770px){
+    .newModelsItems{
+        padding: 0 65px;
+    }
+}

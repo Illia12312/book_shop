@@ -60,3 +60,17 @@
     color: rgb(64, 140, 221);
     border-radius: 5px;
 }
+
+@media (max-width: 770px){
+    .cardImg{
+        height: 120px;
+        width: auto;
+    }
+}
+
+@media (max-width: 570px){
+    .cardImg{
+        height: 80px;
+        width: auto;
+    }
+}

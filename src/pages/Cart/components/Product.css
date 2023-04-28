@@ -74,3 +74,15 @@
 .buttonImg:hover{
     opacity: 0.5;
 }
+
+@media (max-width: 745px){
+    .productImgg {
+        width: 130px;
+    }
+}
+
+@media (max-width: 575px){
+    .productImgg {
+        width: 90px;
+    }
+}
