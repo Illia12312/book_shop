@@ -39,14 +39,16 @@ const LogOut = () => {
         <div className="logOutGreeting">
         Здравствуйте {name}
         </div>
-        <label htmlFor="profileFotoChanger" className="profileFotoChangerLabel">
-          Загрузить файл
-        </label>
-        <input id="profileFotoChanger" type="file" onChange={(event) => handleOnChange(event)}/>
-        <div className="profileImgHolder">
-          <img src={imageURL ? imageURL : photo} 
-          alt="здесь будет ваш автар"
-          className="profileImg" />
+        <div className="logOutPhotoAndButtonHolder">
+          <label htmlFor="profileFotoChanger" className="profileFotoChangerLabel">
+            Загрузить файл
+          </label>
+          <input id="profileFotoChanger" type="file" onChange={(event) => handleOnChange(event)}/>
+          <div className="profileImgHolder">
+            <img src={imageURL ? imageURL : photo} 
+            alt="здесь будет ваш автар"
+            className="profileImg" />
+          </div>
         </div>
       </form>
       <h3 className="logOutTitle">Xотите выйти из {email}?</h3>

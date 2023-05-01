@@ -11,7 +11,6 @@ import SearchItem from "../SearchItem/SearchItem";
 import { useSelector } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
 import userLogo from "../../img/user.png";
-import LogOut from "../../pages/LogOut/LogOut";
 
 
 const Header = () =>{
@@ -20,10 +19,7 @@ const Header = () =>{
     let {response} = useLookinFor(value);
     const { isAuth, email, token, name, surname } = useAuth();
 
-    console.log(isAuth, email);
-
     const emailSecond = useSelector((state) => state.user.email);
-    console.log(emailSecond);
     
     const cartArray = useSelector((state) => state.cart.cart);
 

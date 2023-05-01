@@ -23,11 +23,21 @@
   .logOutButton:hover {
     background: rgb(172, 85, 85);
   }
+
+  .logOutGreeting{
+    font-size: 26px;
+    font-weight: 700;
+  }
   
   .profileFoto{
     margin-bottom: 60px;
     display: flex;
     justify-content:space-between;
+    gap: 20px;
+  }
+
+  .logOutPhotoAndButtonHolder{
+    display: flex;
     gap: 20px;
   }
   

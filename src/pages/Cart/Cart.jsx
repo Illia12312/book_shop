@@ -3,10 +3,14 @@ import { useSelector, useDispatch } from 'react-redux';
 import './Cart.css';
 import Product from './components/Product';
 import { setCartCountACtion, setCartPriceACtion } from '../../redux-store/cart/actions';
+import {Link} from "react-router-dom"
+import { useAuth } from "../../hooks/useAuth";
+import Button from '@mui/material/Button';
 
 function Cart() {
   const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
+  const { isAuth, email, token, name, surname } = useAuth();
   
 
   if(cart.length !== 0){
@@ -41,6 +45,10 @@ function Cart() {
           <footer className="cartFooter">
             <div className="cartFooterCount">{cart.length !== 0 ? count : 0} шт.</div>
             <div className="cartFooterPrice">{cart.length !== 0 ? price : 0} грн.</div>
+            <Link to="/LogOut" className='cartBuyLink'>
+              {isAuth && cart.length !== 0 ? <Button variant="contained headerHolderEnterButton">Купить</Button>:
+              <Button variant="contained headerHolderEnterButton" disabled>Купить</Button>}
+            </Link>
           </footer>
         </div>
       </div>
