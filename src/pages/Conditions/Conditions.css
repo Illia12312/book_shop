@@ -1,0 +1,18 @@
+.conditions{
+    margin: 50px 180px 100px;
+}
+
+.conditionsTitle{
+    text-transform: uppercase;
+    text-align: left;
+    margin-bottom: 18px;
+    font-size: 17px;
+}
+
+.conditionsText{
+    margin-bottom: 10px;
+}
+
+.conditionsTextLast{
+    margin-bottom: 42px;
+}

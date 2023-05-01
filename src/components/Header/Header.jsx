@@ -9,13 +9,22 @@ import LoginPopup from "./LoginPopup/LoginPopup";
 import { useLookinFor } from "../../hooks/useSearch";
 import SearchItem from "../SearchItem/SearchItem";
 import { useSelector } from "react-redux";
+import { useAuth } from "../../hooks/useAuth";
+import userLogo from "../../img/user.png";
+import LogOut from "../../pages/LogOut/LogOut";
 
 
 const Header = () =>{
     const [active, setActive] = useState(false);
     const [value, setValue] = useState('');
     let {response} = useLookinFor(value);
+    const { isAuth, email, token, name, surname } = useAuth();
 
+    console.log(isAuth, email);
+
+    const emailSecond = useSelector((state) => state.user.email);
+    console.log(emailSecond);
+    
     const cartArray = useSelector((state) => state.cart.cart);
 
     return(
@@ -49,7 +58,10 @@ const Header = () =>{
 
 
                 <div className="headerItems headerItemsEnterHolder">
-                    <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button>
+                    {isAuth ? <Link to="/logOut" className="headerHolderLogOutLink">
+                        <img src={userLogo} alt="user"/>
+                    </Link> : 
+                    <Button variant="contained headerHolderEnterButton" onClick={() => setActive(true)}>Войти</Button>}
                     <div className="headerHolderCartAndCartCounterHeader">
                         {cartArray.length === 0 ? 
                             <span className="cartCounterHeader">0</span>  :

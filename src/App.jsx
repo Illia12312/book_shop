@@ -16,6 +16,8 @@ import Science from './pages/CategoriesOfHeader/Science/Science';
 import Payment from './pages/Payment/Payment';
 import Delivery from './pages/Delivery/Delivery';
 import Return from "./pages/Return/Return"
+import Conditions from './pages/Conditions/Conditions';
+import LogOut from './pages/LogOut/LogOut';
 
 function App() {
   return (
@@ -35,8 +37,10 @@ function App() {
           <Route path='/return' element={<Return/>} />
           <Route path='/payment' element={<Payment/>} />
           <Route path='/delivery' element={<Delivery/>} />
-            <Route path='/science' element={<Science/>} />
+          <Route path='/science' element={<Science/>} />
           <Route path='/thriller' element={<Thriller/>} />
+          <Route path='/conditions' element={<Conditions/>}/>
+          <Route path='/LogOut' element={<LogOut/>}/>
         </Route>
       </Routes>
     </div>

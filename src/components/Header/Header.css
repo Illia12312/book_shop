@@ -41,6 +41,17 @@
     border: 2px solid rgb(123, 175, 149) !important;
 }
 
+.headerHolderLogOutLink{
+    opacity:1;
+    transition: 0.3s ease;
+    position: relative;
+    top: 2px;
+}
+
+.headerHolderLogOutLink:hover{
+    opacity: 0.65;
+}
+
 .headerHolderSearch,
 .headerHolderCart{
     cursor: pointer;
