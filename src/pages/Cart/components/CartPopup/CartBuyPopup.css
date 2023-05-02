@@ -1,0 +1,47 @@
+.CartBuyPopup{
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.4);
+    position:fixed;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.4s;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.CartBuyPopup.active{
+    display: flex;
+    opacity: 1;
+    pointer-events: all;
+}
+
+.CartBuyPopupContent{
+    padding: 60px;
+    border-radius: 12px;
+    background-color: white;
+    transform: translate(-3000px, 0);
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.CartBuyPopupCloser{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.CartBuyPopupCloser:hover{
+    opacity: 0.6;
+}
+
+.CartBuyPopupContent.active{
+    transform: translate(0,0); 
+}

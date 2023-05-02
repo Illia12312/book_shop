@@ -56,14 +56,10 @@
   font-weight: 700;
 }
 
-.headerHolderEnterButton{
+.CartHolderEnterButton{
   height: 30px;
   border: 2px solid rgb(123, 175, 149) !important;
-}
-
-.cartBuyLink{
-  text-decoration: none;
-  color: rgb(123, 175, 149);
   position: relative;
   right: 100px;
+  color:rgb(123, 175, 149) !important;
 }

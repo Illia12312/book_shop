@@ -6,8 +6,10 @@ import { setCartCountACtion, setCartPriceACtion } from '../../redux-store/cart/a
 import {Link} from "react-router-dom"
 import { useAuth } from "../../hooks/useAuth";
 import Button from '@mui/material/Button';
+import CartPopup from './components/CartPopup/CartPopup';
 
 function Cart() {
+  const [active, setActive] = useState(false);
   const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
   const { isAuth, email, token, name, surname } = useAuth();
@@ -45,13 +47,12 @@ function Cart() {
           <footer className="cartFooter">
             <div className="cartFooterCount">{cart.length !== 0 ? count : 0} шт.</div>
             <div className="cartFooterPrice">{cart.length !== 0 ? price : 0} грн.</div>
-            <Link to="/LogOut" className='cartBuyLink'>
-              {isAuth && cart.length !== 0 ? <Button variant="contained headerHolderEnterButton">Купить</Button>:
-              <Button variant="contained headerHolderEnterButton" disabled>Купить</Button>}
-            </Link>
+            {isAuth && cart.length !== 0 ? <Button variant="contained headerHolderEnterButton CartHolderEnterButton" onClick={() => setActive(true)}>Купить</Button>:
+            <Button variant="contained headerHolderEnterButton CartHolderEnterButton" disabled>Купить</Button>}
           </footer>
         </div>
       </div>
+      <CartPopup active={active} setActive={setActive}/>
     </div>
   );
 }
