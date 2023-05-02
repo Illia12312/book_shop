@@ -20,9 +20,16 @@
     pointer-events: all;
 }
 
+.CartBuyPopupText{
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 15px;
+}
+
 .CartBuyPopupContent{
     padding: 60px;
     border-radius: 12px;
+    max-width: 600px;
     background-color: white;
     transform: translate(-3000px, 0);
     transition: transform 0.3s ease;

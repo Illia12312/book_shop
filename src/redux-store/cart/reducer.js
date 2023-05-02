@@ -33,7 +33,7 @@ const initialState = {
           case RESET_CART:
           return{
             ...state,
-            cart: null,
+            cart: [],
           }
         case SET_CART_COUNT:
           return{

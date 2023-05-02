@@ -2,8 +2,11 @@ import "./CartPopup.css";
 import closer from "../../../../img/icons/closer.svg";
 import { useState } from "react";
 import CartBuyPopup from "./CartBuyPopup";
+import { resetCartAction } from "../../../../redux-store/cart/actions";
+import { useSelector, useDispatch } from 'react-redux';
 
 const CartPopup = ({active, setActive}) =>{
+    const dispatch = useDispatch();
     const [name, setName] = useState('');
     const [surname, setSurname] = useState('');
     const [number, setNumber] = useState('');
@@ -11,6 +14,10 @@ const CartPopup = ({active, setActive}) =>{
     const [date, setDate] = useState('');
     const [CVV, setCVV] = useState('');
     const [activePopup, setActivePopup] = useState(false);
+    const closeFunc = (setActivePopup) =>{
+        dispatch(resetCartAction());
+        setActivePopup(true);
+    }
 
     return(
         <div className={active ? "CartPopup active" : "CartPopup"} onClick={() => setActive(false)}>
@@ -47,12 +54,10 @@ const CartPopup = ({active, setActive}) =>{
                 <div className="cartCardNumberHolder">
                 </div>
                 {name !== '' && surname !== '' && number.length > 11 && cardNumber.length > 15 && date.length > 4 
-                && CVV.length > 2 ? <button className="CartPopupButton" onClick={() => {
-                    setActivePopup(true)
-                }}>КУПИТЬ</button> :
+                && CVV.length > 2 ? <button className="CartPopupButton" onClick={() => closeFunc(setActivePopup)}>КУПИТЬ</button> :
                 <button className="CartPopupButton" onClick={() => alert("Введенные данные некоректны")}>КУПИТЬ</button>}
             </div>
-            <CartBuyPopup activePopup={activePopup} setActivePopup={setActivePopup}/>
+            <CartBuyPopup activePopup={activePopup} setActivePopup={setActivePopup} setActive={setActive}/>
         </div>
     )
 }
