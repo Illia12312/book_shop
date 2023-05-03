@@ -46,7 +46,7 @@ const Kid = () =>{
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">Для Детей</h3>
-          <Box sx={{ width: 180 }}>
+          <Box sx={{ width: 180 }} className="kidBox">
             <Slider
             getAriaLabel={() => 'Minimum distance'}
             value={value}
@@ -72,7 +72,7 @@ const Kid = () =>{
         </select>
         {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === true && 
+              item.type === "kid" &&  item.isDiscount === true && value[0] < item.price && value[1] > item.price &&
               <DiscountCard
               type = "simple"
               name={item.name}
@@ -84,7 +84,7 @@ const Kid = () =>{
           )}
           {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === false && 
+              item.type === "kid" &&  item.isDiscount === false && value[0] < item.price && value[1] > item.price &&
               <Card
               type = "simple"
                 name={item.name}

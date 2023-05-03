@@ -1,5 +1,5 @@
 .kid{
-    margin: 120px 100px 100px;
+    margin: 150px 100px 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -21,4 +21,10 @@
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
+}
+
+.kidBox{
+    position: absolute;
+    left: 170px;
+    top: 285px;
 }
