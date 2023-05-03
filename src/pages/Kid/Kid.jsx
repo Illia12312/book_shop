@@ -7,6 +7,7 @@ import _ from "lodash";
 import DiscountCard from "../../components/DiscountCard/DiscountCard";
 import Slider from '@mui/material/Slider';
 import Box from '@mui/material/Box';
+import { useMinMax } from "../../hooks/useMinMax";
 
 
 function valuetext(value) {
@@ -15,13 +16,13 @@ function valuetext(value) {
 
 const Kid = () =>{
     const [item, setItem] = useState([]);
-    const [value, setValue] = useState([60,345])
     const handleChange = (event, newValue) => {
       setValue(newValue);
     };
-
     const books = useSelector((state) => state.books.books)
-    const booksType = books.filter((i) => i.type === "kid")
+    const booksType = books.filter((i) => i.type === "kid");
+    const {min, max} = useMinMax(booksType);
+    const [value, setValue] = useState([min, max])
 
     useEffect(() => {
         setItem(books);
@@ -40,13 +41,13 @@ const Kid = () =>{
     }
 
     useEffect(() => {
-      console.log(value, booksType);
+      console.log(min, max);
     }, value);
 
     return(
         <div className="kidHolder">
           <h3 className="kidTitle">Для Детей</h3>
-          <Box sx={{ width: 180 }} className="kidBox">
+          <Box sx={{ width: 180 }} className="kidBox"> 
             <Slider
             getAriaLabel={() => 'Minimum distance'}
             value={value}
@@ -54,10 +55,11 @@ const Kid = () =>{
             valueLabelDisplay="auto"
             getAriaValueText={valuetext}
             disableSwap
-            max={345}
-            min={60}
+            max={max}
+            min={min}
             color="secondary"
             />
+            <span className="kidBoxTitle">сортировка по цене</span>
           </Box>
           <div className="kid">
           <select
@@ -72,7 +74,7 @@ const Kid = () =>{
         </select>
         {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === true && value[0] < item.price && value[1] > item.price &&
+              item.type === "kid" &&  item.isDiscount === true && value[0] <= item.price && value[1] >= item.price &&
               <DiscountCard
               type = "simple"
               name={item.name}
@@ -84,7 +86,7 @@ const Kid = () =>{
           )}
           {item.map(
             (item) =>
-              item.type === "kid" &&  item.isDiscount === false && value[0] < item.price && value[1] > item.price &&
+              item.type === "kid" &&  item.isDiscount === false && value[0] <= item.price && value[1] >= item.price &&
               <Card
               type = "simple"
                 name={item.name}
