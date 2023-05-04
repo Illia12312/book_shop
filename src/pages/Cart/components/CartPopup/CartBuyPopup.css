@@ -52,3 +52,9 @@
 .CartBuyPopupContent.active{
     transform: translate(0,0); 
 }
+
+@media (max-width: 640px){
+    .CartBuyPopupContent{
+        max-width: 400px;
+    }
+}

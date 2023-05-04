@@ -79,10 +79,23 @@
     .productImgg {
         width: 130px;
     }
+
+    .countCart{
+        font-size: 15px;
+    }
+
+    .product {
+        column-gap: 10px;
+        font-size: 15px;
+    }
 }
 
 @media (max-width: 575px){
     .productImgg {
         width: 90px;
+    }
+
+    .product {
+        column-gap: 0px;
     }
 }

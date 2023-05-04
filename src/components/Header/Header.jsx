@@ -11,15 +11,21 @@ import SearchItem from "../SearchItem/SearchItem";
 import { useSelector } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
 import userLogo from "../../img/user.png";
+import burger from "../../img/burger-menu.png";
+import closer from "../../img/icons/closer.svg";
 
 
 const Header = () =>{
+    const [navActive, setNavActive] = useState(false);
     const [active, setActive] = useState(false);
     const [value, setValue] = useState('');
     let {response} = useLookinFor(value);
     const { isAuth, email, token, name, surname } = useAuth();
 
     const emailSecond = useSelector((state) => state.user.email);
+    const clickerFunc = (nav, setNav) =>{
+        nav === false ? setNav(true) : setNav(false);
+    }
     
     const cartArray = useSelector((state) => state.cart.cart);
 
@@ -66,9 +72,15 @@ const Header = () =>{
                         
                         <Link to="/cart"><img src={cart} alt='cart' className="headerHolderCart"/></Link>
                     </div>
+                    <button className="headerItemsBurger" onClick={() => clickerFunc(navActive ,setNavActive)}>
+                        <img src={burger} alt="burger" className="headerItemsBurgerIcon" />
+                    </button>
                 </div>
             </div>
-            <div className="headerCategories">
+            <div className={navActive ? "headerCategories active" :"headerCategories"}>
+                <button className="headerItemsCloser" onClick={() => setNavActive(false)}>
+                    <img src={closer} alt="Closer" className="headerItemsCloserIcon" />
+                </button>
                 <nav className="headerListHolder">КАТЕГОРИИ
                     <ul className="headerList">
                         <Link to="/fantasy" className="transferLink"><li className="headerCategoriesListItem">Фантастика</li></Link>

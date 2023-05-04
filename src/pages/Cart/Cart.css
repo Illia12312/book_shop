@@ -63,3 +63,15 @@
   right: 100px;
   color:rgb(123, 175, 149) !important;
 }
+
+@media (max-width: 810px){
+  .CartHolderEnterButton{
+    right: 50px;
+  }
+}
+
+@media (max-width: 610px){
+  .CartHolderEnterButton{
+    right: 20px;
+  }
+}

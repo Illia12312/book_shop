@@ -20,7 +20,7 @@ const Footer = () =>{
                     +%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2,+%D0%A5%D0%B0%D1%80%D1%8C%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F
                     +%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+%D0%A3%D0%BA%D1%80%D0%B0%D0%B8%D0%BD%D0%B0,+61000/@50.0120357,36.24
                     05313,17z/data=!3m1!4b1!4m6!3m5!1s0x4127a0dbd3432627:0x5050954abba7d85e!8m2!3d50.0120357!4d36.24272!16s%2Fm
-                    %2F0ngtkns" target="_blank" className="footerLink footerLinkLocationFooter">st. Tornado, 2, block 4</a>
+                    %2F0ngtkns" target="_blank" className="footerLink footerLinkLocationFooter">st. Tornado, 2</a>
                 </div>
             </div>
             <div className="footerItem">
@@ -34,7 +34,6 @@ const Footer = () =>{
                 <img src={instagram} alt="instagram" className="footerItemIcons"/>
                 <img src={telegram} alt="telegram" className="footerItemIcons"/>
                 <img src={facebook} alt="facebook" className="footerItemIcons"/>
-                <img src={tiktok} alt="tiktok" className="footerItemIcons"/>
             </div>
         </div>
      </div>   

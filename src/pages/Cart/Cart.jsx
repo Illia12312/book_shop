@@ -22,9 +22,6 @@ function Cart() {
 
   const count = useSelector((state) => state.cart.cartCount)
   const price = useSelector((state) => state.cart.cartPrice)
-  console.log(count);
-  console.log(cart);
-
   return (
     <div className="cartWrapper">
       <header className="sectionCartHeader">

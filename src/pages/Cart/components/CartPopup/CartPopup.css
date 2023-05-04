@@ -100,3 +100,18 @@
 .cartDataHolder{
     margin-bottom: 30px;
 }
+
+@media (max-width: 730px){
+    .cartNameAndSurnameHolder,
+    .cartNumberHolder,
+    .cartDataHolder{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .CartNameInput,
+    .cartNumberInput,
+    .cartDateInput{
+        margin-right: 0px;
+    }
+}
