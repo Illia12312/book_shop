@@ -73,29 +73,29 @@ const Kid = () =>{
           <option value="desc">Цена по убыванию</option>
         </select>
         {item.map(
-            (item) =>
-              item.type === "kid" &&  item.isDiscount === true && value[0] <= item.price && value[1] >= item.price &&
-              <DiscountCard
-              type = "simple"
-              name={item.name}
-              author={item.author}
-              key={item.id}
-              price={item.price}
-              img={item.img}
-              />
-          )}
-          {item.map(
-            (item) =>
-              item.type === "kid" &&  item.isDiscount === false && value[0] <= item.price && value[1] >= item.price &&
-              <Card
-              type = "simple"
+            (item) => {
+              if (item.type === "kid" &&  item.isDiscount === true && value[0] <= item.price && value[1] >= item.price ) {
+                return <DiscountCard
+                type = "simple"
                 name={item.name}
                 author={item.author}
                 key={item.id}
                 price={item.price}
                 img={item.img}
-              />
-          )}
+                />;
+              }
+              else if (item.type === "kid" &&  item.isDiscount === false && value[0] <= item.price && value[1] >= item.price) {
+                return <Card
+                   type = "simple"
+                   name={item.name}
+                   author={item.author}
+                   key={item.id}
+                   price={item.price}
+                   img={item.img}
+                   />
+              }
+            }
+           )}
           </div>
         </div>
     )
