@@ -8,7 +8,7 @@ import DiscountCard from "../DiscountCard/DiscountCard";
 const NewModels = () =>{
     const [item, setItem] = useState([]);
     const [counter, setCounter] = useState(10);
-    const books = useSelector((state) => state.books.books);
+    const books = useSelector((state) => state.entity.characters);
 
     useEffect(() => {
         setItem(books.slice(0,counter))

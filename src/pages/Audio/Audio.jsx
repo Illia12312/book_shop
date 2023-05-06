@@ -18,7 +18,7 @@ const Audio = () =>{
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const books = useSelector((state) => state.books.books)
+  const books = useSelector((state) => state.entity.characters);
   const booksType = books.filter((i) => i.type === "audio");
   const {min, max} = useMinMax(booksType);
   const [value, setValue] = useState([min, max])
@@ -39,9 +39,9 @@ const Audio = () =>{
   }
   }
 
-  useEffect(() => {
-    console.log(min, max);
-  }, value);
+  // useEffect(() => {
+  //   console.log(min, max);
+  // }, value);
 
   return(
       <div className="kidHolder">

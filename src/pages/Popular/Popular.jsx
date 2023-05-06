@@ -18,7 +18,7 @@ const Popular = () =>{
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
-  const books = useSelector((state) => state.books.books)
+  const books = useSelector((state) => state.entity.characters);
   const booksType = books.filter((i) => i.isPopular === true);
   const {min, max} = useMinMax(booksType);
   const [value, setValue] = useState([min, max])
@@ -38,10 +38,6 @@ const Popular = () =>{
       setItem(_.orderBy(books, ['price'], ['desc']));
   }
   }
-
-  useEffect(() => {
-    console.log(min, max);
-  }, value);
 
   return(
       <div className="kidHolder">

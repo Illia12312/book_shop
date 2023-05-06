@@ -27,7 +27,7 @@ const LoginPopup = ({active, setActive}) =>{
               name
             ))
             backFunc();})
-        .catch(console.log("fail"));
+        .catch(console.log());
     }
 
     return(

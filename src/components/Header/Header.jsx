@@ -4,15 +4,16 @@ import logo from './../../img/logo.png';
 import cart from './../../img/icons/shopping-bag.png';
 import search from './../../img/icons/search.png';
 import Button from '@mui/material/Button';
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import LoginPopup from "./LoginPopup/LoginPopup";
 import { useLookinFor } from "../../hooks/useSearch";
 import SearchItem from "../SearchItem/SearchItem";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
 import userLogo from "../../img/user.png";
 import burger from "../../img/burger-menu.png";
 import closer from "../../img/icons/closer.svg";
+import { getDataRequestAction } from "../../redux-store/entity/actions";
 
 
 const Header = () =>{
@@ -21,6 +22,14 @@ const Header = () =>{
     const [value, setValue] = useState('');
     let {response} = useLookinFor(value);
     const { isAuth, email, token, name, surname } = useAuth();
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(getDataRequestAction());
+      }, []);
+
+    const char = useSelector((state) => state.entity.characters);
+    console.log(char);
 
     const emailSecond = useSelector((state) => state.user.email);
     const clickerFunc = (nav, setNav) =>{
