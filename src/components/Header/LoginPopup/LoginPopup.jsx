@@ -16,11 +16,10 @@ const LoginPopup = ({active, setActive}) =>{
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
 
-    const handleClick = (email, password, name) => {
+    const handleClick = (email, password) => {
         const auth = getAuth();
         signInWithEmailAndPassword(auth, email, password, name)
         .then(({user}) => {
-            console.log(user);
             dispatch(setUserAction(
               email,
               user.accessToken,
@@ -28,7 +27,7 @@ const LoginPopup = ({active, setActive}) =>{
               name
             ))
             backFunc();})
-        .catch(console.log());
+        .catch(console.log("fail"));
     }
 
     return(

@@ -25,6 +25,7 @@
     position: relative;
     border-radius: 12px;
     display: flex;
+    max-height: 90vh;
     padding: 40px 70px 40px 10px;
 }
 
@@ -53,7 +54,7 @@
 .cardPopupPrice{
     color: rgb(47, 84, 123);
     font-weight: 700;
-    margin-bottom: 85px;
+    margin-bottom: 10px;
     font-size: 20px;
 }
 
@@ -105,10 +106,10 @@
 }
 
 .cardPopupCountHolder{
-    border: 2px solid rgb(231, 210, 225);
     border-radius: 10px;
     position: relative;
     bottom: 20px;
+    display: flex;
     transform: scale(1, 0);
     transition: transform 0.3s ease;
     text-align: center;
@@ -124,7 +125,100 @@
 
 .cardPopupCount{
     width: 100%;
-    border-bottom: 2px solid rgb(231, 210, 225);
     cursor: pointer;
     padding: 10px 0;
 }   
+
+.cardPopupAdd{
+    color: rgb(112, 112, 112);
+    margin-bottom: 10px;
+    font-size: 17px;
+    max-width: 480px;
+}
+
+.cardPopupAddLast{
+    margin-bottom: 30px;
+    text-align: left;
+}
+
+@media (max-width: 970px){
+    .cardPopupAddLast{
+        overflow: scroll;
+        max-height: 60px;
+    }
+
+    .cardPopupImg{
+        height: 280px;
+        width: auto;
+    }
+
+    .cardPopupAdd{
+        max-width: 380px;
+    }
+
+    .cardPopupContent{
+        background-color: #FFF;
+        position: relative;
+        border-radius: 12px;
+        display: flex;
+        max-height: 90vh;
+        padding: 40px 70px 40px 10px;
+    }
+}
+
+@media (max-width: 800px){
+    .cardPopupImg{
+        height: 220px;
+        width: auto;
+    }
+
+    .cardPopupContent{
+        padding: 20px 70px 20px 10px;
+    }
+}
+
+@media (max-width: 730px){
+    .cardPopupImg{
+        height: 220px;
+        width: auto;
+    }
+
+    .cardPopupContent{
+        padding: 20px 30px 20px 10px;
+    }
+
+    .cardPopupCountHolder{
+        max-width: 150px;
+    }
+
+    .cardPopupCountButton{
+        font-size: 15px;
+        padding: 10px 20px;
+    }
+    
+    .cardPopupCartButton{
+        font-size: 15px;
+        padding: 10px 40px;
+    }
+
+    .cardPopupCloser{
+        right: 10px;
+        top: 10px;
+    }
+    
+}
+
+@media (max-width: 660px){
+    .cardPopupImg{
+        height: 180px;
+        width: auto;
+    }
+
+    .cardPopupName{
+        font-size: 18px;
+    }
+    
+    .cardPopupContentHolder{
+        max-width: 280px;
+    }
+}

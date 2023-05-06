@@ -81,6 +81,10 @@ const Popular = () =>{
                 key={item.id}
                 price={item.price}
                 img={item.img}
+                year={item.year}
+                format={item.format}
+                edition={item.edition}
+                aboutIt={item.aboutIt}
                 />;
               }
               else if (item.isPopular === true &&  item.isDiscount === false && value[0] <= item.price && value[1] >= item.price) {
@@ -91,6 +95,10 @@ const Popular = () =>{
                    key={item.id}
                    price={item.price}
                    img={item.img}
+                   year={item.year}
+                   format={item.format}
+                   edition={item.edition}
+                   aboutIt={item.aboutIt}
                    />
               }
             }

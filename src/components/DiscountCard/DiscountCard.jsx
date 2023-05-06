@@ -5,7 +5,7 @@ import { useState } from "react";
 import { setCartAction } from "../../redux-store/cart/actions";
 import { useDispatch, useSelector } from "react-redux";
 
-const DiscountCard = ({type, img, name, author, price}) =>{
+const DiscountCard = ({type, img, name, author, price, year, format, edition, aboutIt}) =>{
     const fakePrice = Math.round(price / 5 + price);
     const [active, setActive] = useState(false)
 
@@ -28,7 +28,8 @@ const DiscountCard = ({type, img, name, author, price}) =>{
             </div>
             <button className="cardAddToCart" onClick={(e) => {cartFunc(name, price, author, 1  , img); e.stopPropagation()}}>добавить в корзину</button>
         </div>
-        <CardPopup active={active} setActive={setActive} name={name} img={img} author={author} price={price}/>
+        <CardPopup active={active} setActive={setActive} name={name} img={img} author={author} price={price}
+        year={year} format={format} edition={edition} aboutIt={aboutIt}/>
         </div>
     )
 }

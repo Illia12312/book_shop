@@ -81,6 +81,10 @@ const Discount = () =>{
             key={item.id}
             price={item.price}
             img={item.img}
+            year={item.year}
+            format={item.format}
+            edition={item.edition}
+            aboutIt={item.aboutIt}
             />
         )}
         </div>

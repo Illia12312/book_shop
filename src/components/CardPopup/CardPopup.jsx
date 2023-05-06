@@ -4,7 +4,7 @@ import { useState } from "react";
 import { setCartAction } from "../../redux-store/cart/actions";
 import { useDispatch, useSelector } from "react-redux";
 
-const CardPopup = ({active, setActive, name, author, img, price}) =>{
+const CardPopup = ({active, setActive, name, author, img, price, year, format, edition, aboutIt}) =>{
     const [count, setCount] = useState(1);
     const [open, setOpen] = useState(false);
     const dispatch = useDispatch();
@@ -29,6 +29,10 @@ const CardPopup = ({active, setActive, name, author, img, price}) =>{
                         <div className="cardPopupName">{name}</div>
                         <div className="cardPopupAuthor">{author}</div>
                         <div className="cardPopupPrice">{price} грн.</div>
+                        <div className="cardPopupAdd">Год издания: {year} </div>
+                        <div className="cardPopupAdd">Формат: {format} </div>
+                        <div className="cardPopupAdd">Издательство: {edition}</div>
+                        <div className="cardPopupAdd cardPopupAddLast">О книге: {aboutIt}</div>
                     </div>
                     <div className="cardPopupButtonHolder">
                         <button className="cardPopupCartButton" onClick={() => cartFunc(name, price, author, count, img)}>ДОБАВИТЬ В КОРЗИНУ</button>
